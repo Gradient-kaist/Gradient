@@ -36,7 +36,6 @@ def save_gpu_status_data():
 
 
 if __name__ == '__main__':
-    metric_init({})
     connection = pymongo.MongoClient("localhost", port)
     db = connection["gradient"]
     print ("Start collecting gpu status data.\nData will be saved to MongoDB localhost:%d" % port)
