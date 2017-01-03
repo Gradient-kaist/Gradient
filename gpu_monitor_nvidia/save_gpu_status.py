@@ -4,12 +4,6 @@ from pynvml import *
 
 port = 27017
 
-def get_property(gpunum, metric):
-    metric_name = "gpu"+str(gpunum)+"_"+metric
-    return str(gpu_device_handler(metric_name))
-    
-
-
 def gpu_status_dict():
     ''' returns dictionary of GPU information ''' 
     # Initialize NVML
@@ -79,44 +73,6 @@ def gpu_status_dict():
         print("Error while shutting down NVML: ", err)
         return
     return infos
-        
-
-
-def save_gpu_status_data():
-    '''
-    #Collect folling data
-    timestamp
-    gpu_util
-    gpu_mem_speed
-    gpu_graphics_speed
-    '''
-    nvmlInit()
-    gpu_num = get_gpu_num()
-    for i in range(gpu_num):
-        collection_name = "gpu%s_status" % i
-        collection = db[collection_name]
-
-        gpu_temp_name
-
-        gpu_status_row = {"timestamp" : str(time.time()),
-                "util" : get_property(i, "util"),
-                "mem_util" : get_property(i, "mem_util"),
-                "mem_used" : get_property(i, "mem_used"),
-                "mem_total" : get_property(i, "mem_total"),
-                "fan" : get_property(i, "fan"),
-                "power_usage" : get_property(i, "power_usage"),
-                "temp" : get_property(i, "temp"),
-                "graphics_speed" : get_property(i, "graphics_speed"),
-                "max_graphics_speed": get_property(i, "max_graphics_speed"),
-                "mem_speed" : get_property(i, "mem_speed"),
-                "max_mem_speed" : get_property(i, "max_mem_speed"),
-
-                }
-        print(gpu_status_row)
-
-        collection.insert(gpu_status_row)
-
-    nvmlShutdown()
 
 
 if __name__ == '__main__':
@@ -129,7 +85,5 @@ if __name__ == '__main__':
         info = gpu_status_dict()
         collection.insert_one(info)
         time.sleep(5)
-
-
 
 
