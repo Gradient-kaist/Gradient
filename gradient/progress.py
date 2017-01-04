@@ -15,6 +15,7 @@ def registerProgress(name):
     data["name"] = name
     data["current"] = 0
     data["max"] = 100
+    data["time"] = time.time()
     collection.insert_one(data)
 
 
@@ -23,6 +24,7 @@ def updateProgress(name, curIter, maxIter):
     data["name"] = name
     data["current"] = curIter
     data["max"] = maxIter
+    data["time"] = time.time()
     collection.insert_one(data)
 
 
