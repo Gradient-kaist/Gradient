@@ -77,3 +77,22 @@ for i in range(20000):
 print("test accuracy %g"%accuracy.eval(feed_dict={
     x: mnist.test.images, y_: mnist.test.labels, keep_prob: 1.0}))
 ```
+
+
+
+### Other open source libraries used
+* [React](https://facebook.github.io/react/)
+* [NVML](https://developer.nvidia.com/nvidia-management-library-nvml)
+* [NodeJS](https://nodejs.org/en/)
+* [Pymongo](https://api.mongodb.com/python/current/)
+* [Grommet](https://github.com/grommet/grommet)
+* [Recharts](http://recharts.org/#/en-US/)
+* [gulp](http://gulpjs.com/)
+* [webpack](https://webpack.github.io/)
+
+
+
+
+
+
+
