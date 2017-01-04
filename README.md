@@ -15,6 +15,7 @@ For the following guide, I will assume that all *web server*, *MongoDB server* a
 
 ### Client API installation (to use progress API)
 Setup your virtualenv (or global, if you wish)
+
 (This guide assumes that MongoDB is installed in localhost)
 ```sh
 $ pip install pymongo
@@ -44,10 +45,14 @@ gulp dev
 
 
 
-### Progress API usage
+### Progress API Usage
+#### All you need to do
 `import gradient`
+
 `gradient.registerProgress("DeepMNIST")` (parameters : *name*)
+
 `gradient.updateProgress("DeepMNIST", i, 20000)` (parameters : *name*, *current_iteration*, *maximum_iteration*)
+#### Example Usage
 ```python
 import gradient
 sess.run(tf.global_variables_initializer())
