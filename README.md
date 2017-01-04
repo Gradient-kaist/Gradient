@@ -16,7 +16,7 @@ Generally, there are 3 components in this project
 (normally, nodejs webserver and MongoDB server would run on same machine, however, you can also configure with different settings)
 *  **Clients**  (GPU servers) which will send *GPU data* and *learning progress data*.
 
-![alt tag](https://cloud.githubusercontent.com/assets/14136146/21644863/f7547be6-d2d2-11e6-8ff8-e198cf6c0050.png)
+![alt tag](https://cloud.githubusercontent.com/assets/14136146/21645024/c3115b1e-d2d3-11e6-9e07-6b17136cfe22.png)
 
 ## Installation
 For the following guide, I will assume that all *web server*, *MongoDB server* and *GPU server* will run on the same machine. (However, you can still configure differently)
