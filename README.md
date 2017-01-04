@@ -18,7 +18,7 @@ Setup your virtualenv (or global, if you wish)
 (This guide assumes that MongoDB is installed in localhost)
 ```sh
 $ pip install pymongo
-$ python setup.py
+$ python setup.py install
 ```
 
 
