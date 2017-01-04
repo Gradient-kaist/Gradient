@@ -1,4 +1,7 @@
 # Gradient
+
+![alt tag](https://cloud.githubusercontent.com/assets/14136146/21643493/ec884d5c-d2cb-11e6-9ca7-1f0ecf254413.png)
+
 Gradient is a machine learning assistance framework that helps developers to monitor the GPU usage and the progress of the trainings in models.
 
 ## Key Features
