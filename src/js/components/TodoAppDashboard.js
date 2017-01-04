@@ -88,7 +88,7 @@ export default class TodoAppDashboard extends Component {
       <Box direction='column'>
         <Box primary={true} flex={true} pad={'large'} direction='column'>
           <Heading tag={'h2'} margin={'medium'}> Memory Usage </Heading>
-          <CircleDashboard />
+          <CircleDashboard />          
         </Box>
         <Box pad={'large'} direction='column'>
           <Heading tag={'h2'} margin={'medium'}> Running Tasks </Heading>

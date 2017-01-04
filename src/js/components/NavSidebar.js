@@ -21,13 +21,13 @@ export default class NavSidebar extends Component {
         <Menu primary={true} fill={true}>
           <Anchor href="#"
             className="active">
-            First
+            AWS
           </Anchor>
           <Anchor href="#">
-            Second
+            Workstation
           </Anchor>
           <Anchor href="#">
-            Third
+            Home
           </Anchor>
         </Menu>
       </Sidebar>

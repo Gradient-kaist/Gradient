@@ -10,6 +10,48 @@ import AnnotatedMeter from 'grommet-addons/components/AnnotatedMeter';
 export default class CircleDashboard extends Component {
   constructor () {
     super();
+    this.state = {
+      gpu1: 45,
+      gpu2: 20,
+      gpu3: 69,
+      gpu4: 10
+    }
+    this.update_time = this.update_time.bind(this, this.state);
+  }
+
+  componentDidMount () {
+    this.interval = setInterval(this.update_time, 1000);
+  }
+
+  update_time () {
+    if (this.state.gpu1 < 50) {
+      var count1 = this.state.gpu1 + 3;
+    }
+    else {
+      var count1 = 30;
+    }
+    if (this.state.gpu2 < 40) {
+      var count2 = this.state.gpu2 + 18;
+    }
+    else {
+      var count2 = 100;
+    }
+    if (this.state.gpu3 > 50) {
+      var count3 = this.state.gpu3 - 4;
+    }
+    else {
+      var count3 = 75;
+    }
+    if (this.state.gpu4 < 22) {
+      var count4 = this.state.gpu4 + 5;
+    }
+    else {
+      var count4 = 12;
+    }
+    this.setState({ gpu1: count1 });
+    this.setState({ gpu2: count2 });
+    this.setState({ gpu3: count3 });
+    this.setState({ gpu4: count4 });
   }
   render () {
     return (
@@ -19,11 +61,12 @@ export default class CircleDashboard extends Component {
             GPU 1
           </Label>
           <AnnotatedMeter legend={true}
-            size="small"
+            size="medium"
             type="circle"
+            units={"MB"}
             series={[
-            {"label": "First", "value": 20, "colorIndex": "graph-1"},
-            {"label": "Second", "value": 50, "colorIndex": "graph-2"}
+            {"label": "Used", "value": 2160, "colorIndex": "graph-1"},
+            {"label": "Free", "value": 4096 - 2160, "colorIndex": "graph-2"}
             ]} />
         </Box>
         <Box basis='1/4' pad="medium" align="center">
@@ -31,11 +74,12 @@ export default class CircleDashboard extends Component {
             GPU 2
           </Label>
           <AnnotatedMeter legend={true}
-            size="small"
+            size="medium"
             type="circle"
+            units={"MB"}
             series={[
-            {"label": "First", "value": 20, "colorIndex": "graph-1"},
-            {"label": "Second", "value": 50, "colorIndex": "graph-2"}
+            {"label": "Used", "value": 3632, "colorIndex": "graph-1"},
+            {"label": "Free", "value": 4096 - 3632, "colorIndex": "graph-2"}
             ]} />
         </Box>
         <Box basis='1/4' pad="medium" align="center">
@@ -43,11 +87,12 @@ export default class CircleDashboard extends Component {
             GPU 3
           </Label>
           <AnnotatedMeter legend={true}
-            size="small"
+            size="medium"
             type="circle"
+            units={"MB"}
             series={[
-            {"label": "First", "value": 20, "colorIndex": "graph-1"},
-            {"label": "Second", "value": 50, "colorIndex": "graph-2"}
+            {"label": "Used", "value": 560, "colorIndex": "graph-1"},
+            {"label": "Free", "value": 4096 - 560, "colorIndex": "graph-2"}
             ]} />
         </Box>
         <Box basis='1/4' pad="medium" align="center">
@@ -55,11 +100,12 @@ export default class CircleDashboard extends Component {
             GPU 4
           </Label>
           <AnnotatedMeter legend={true}
-            size="small"
+            size="medium"
             type="circle"
+            units={"MB"}
             series={[
-            {"label": "First", "value": 20, "colorIndex": "graph-1"},
-            {"label": "Second", "value": 50, "colorIndex": "graph-2"}
+            {"label": "Used", "value": 530, "colorIndex": "graph-1"},
+            {"label": "Free", "value": 4096 - 530, "colorIndex": "graph-2"}
             ]} />
         </Box>
       </Box>
