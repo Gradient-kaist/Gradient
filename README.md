@@ -1,8 +1,7 @@
 # Gradient
+Gradient is the machine learning assistance framework that helps developers to monitor the GPU usage and the progress of the trainings in models.
 
 ![alt tag](https://cloud.githubusercontent.com/assets/14136146/21643493/ec884d5c-d2cb-11e6-9ca7-1f0ecf254413.png)
-
-Gradient is a machine learning assistance framework that helps developers to monitor the GPU usage and the progress of the trainings in models.
 
 ## Key Features
 * Monitor the GPU usage by reporting general GPU usage statistics when the user runs the machine learning program.
@@ -10,13 +9,14 @@ Gradient is a machine learning assistance framework that helps developers to mon
 * Alarm the error situations like gradient explosion or memory lack error  by giving push-notification to the developer.
 
 ## Getting Started
-There are roughly 3 components in this project
+Generally, there are 3 components in this project
 
 * A **nodejs web server** which will host the website
 * A **MongoDB server** which will store the data 
 (normally, nodejs webserver and MongoDB server would run on same machine, however, you can also configure with different settings)
 *  **Clients**  (GPU servers) which will send *GPU data* and *learning progress data*.
 
+![alt tag](https://cloud.githubusercontent.com/assets/14136146/21644254/f81228a6-d2cf-11e6-803d-cc17611366a2.png)
 
 ## Installation
 For the following guide, I will assume that all *web server*, *MongoDB server* and *GPU server* will run on the same machine. (However, you can still configure differently)
