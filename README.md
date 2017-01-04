@@ -10,5 +10,5 @@ $ npm install -d
 
 ### Run
 ```sh
-$ npm start
+gulp dev
 ```
